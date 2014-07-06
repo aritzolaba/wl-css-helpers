@@ -1,15 +1,12 @@
 WL CSS HELPER LIB
 =================
-Author: Aritz Olabarrieta
-Version: 1.0
 
-A tiny LESS file with commonly used CSS instructions, which will
-help you building the layout and structure of any project. It works
-great in combination with Bootstrap.
+A tiny LESS file with commonly used CSS instructions, which will help you building the layout and structure of any project. It works great in combination with Bootstrap.
 
 Simply include the minified CSS version in your proyect:
 
-<link rel="stylesheet" href="wl-helpers.min.css" />
+&lt;link rel="stylesheet" href="wl-helpers.min.css" /&gt;
+
 
 NOTES and USE GUIDE
 -------------------
