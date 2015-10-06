@@ -1,38 +1,43 @@
-// --------------------------------------------------
-// WL CSS HELPER LIB
-// Author: Aritz Olabarrieta
-// Version: 1.0
-//
-// A tiny LESS file with commonly used CSS instructions, which will
-// help you building the layout and structure of any project. It works
-// great in combination with Bootstrap.
-//
-// Simply include the minified CSS version in your proyect:
-//
-// <link rel="stylesheet" href="wl-helpers.min.css" />
-//
-// NOTES and USE GUIDE
-//
-// - All WL classes are prefixed with "wl-".
-// - There are 5 different sizes, which can be configured with
-// "@wl-base-" variables: xs, sm, md, lg and xl.
-// - Fluid boxes are prepared to fit in 100%, so if you want, for
-// example, a 3 column row, you can use the wl-box-33 class, which is
-// a 33.33% div with display set to inline-block.
-//
-// {SIZES} = xs, sm, md, lg OR xl
-// {BOXSIZES} = 75, 60, 50, 40, 33, 25, 20, 16, 15, 14, 12, 11, 10, 5
-//
-// CLEARFIXES:          wl-cfix-{{SIZES}}
-// DISPLAY:             wl-ds-{block, inline, inline-block, none}
-// FLOATS:              wl-fl-{none, left, right}
-// POSITION:            wl-ps-{absolute, fixed, relative, static}
-// MARGINS:             wl-ma-auto, wl-ma-{all, bottom, left, right, top}-{no, {SIZES}}
-// PADDINGS:            wl-pa-{all, bottom, left, right, top}-{SIZES}
-// FLUID BOXES:         wl-box-{{BOXSIZES}}
-// FULLWIDTH:           wl-fullwidth
-//
-// --------------------------------------------------
+/*
+WL CSS HELPER LIB
+Author: Aritz Olabarrieta
+Version: 1.1
+Last Update: 06-10-2015
+
+A tiny LESS file with commonly used CSS instructions, which will
+help you building the layout and structure of any project. It works
+great in combination with Bootstrap.
+
+Simply include the minified CSS version in your proyect:
+
+<link rel="stylesheet" href="wl-helpers.min.css" />
+
+NOTES and USE GUIDE
+
+- All WL classes are prefixed with "wl-".
+- There are 5 different sizes, which can be configured individually using
+"@wl-base-" variables: xs, sm, md, lg and xl, or by default, setting a
+base gutter with "@wl-base-gutter" variable, which automatically gets sized
+proportionally.
+
+{SIZES} = xs, sm, md, lg, xl
+
+CLEARFIXES:          wl-cfix-{{SIZES}}
+BORDER-RADIUS:       wl-br-{{SIZES}}
+DISPLAY:             wl-ds-{block, inline, inline-block, none}
+FLOATS:              wl-fl-{none, left, right}
+MARGINS:             wl-ma-auto, wl-ma-{all, bottom, left, right, top}-{no, {SIZES}}
+PADDINGS:            wl-pa-{all, bottom, left, right, top}-{SIZES}
+POSITION:            wl-ps-{absolute, fixed, relative, static}
+TEXT ALIGNMENTS:     wl-ta-{center, left, right, justify}
+TEXT TRANSFORMS:     wl-tt-{uppercase, lowercase, capitalize}
+VISIBILITY:          wl-vs-{visible, hidden}
+
+Other useful helpers
+
+CENTERDIV:           wl-centerdiv
+FULLWIDTH:           wl-fullwidth
+*/
 
 // --------------------------------------------------
 // VARIABLES
@@ -50,6 +55,7 @@
 // --------------------------------------------------
 
 // CLEARFIXES
+// --------------------------------------------------
 [class*="wl-cfix"] {
     clear: both;
     display: block;
@@ -71,12 +77,8 @@
     margin: @wl-base-xl 0px;
 }
 
-// FULL WIDTH
-.wl-fullwidth {
-    width: 100%;
-}
-
 // DISPLAY
+// --------------------------------------------------
 .wl-ds-inline {
     display: inline;
 }
@@ -91,6 +93,7 @@
 }
 
 // FLOATS
+// --------------------------------------------------
 .wl-fl-none {
     float: none;
 }
@@ -102,6 +105,7 @@
 }
 
 // POSITION
+// --------------------------------------------------
 .wl-ps-static {
     position: static;
 }
@@ -116,6 +120,7 @@
 }
 
 // MARGINS
+// --------------------------------------------------
 .wl-ma-auto {
     margin: auto;
 }
@@ -216,6 +221,7 @@
 }
 
 // PADDINGS
+// --------------------------------------------------
 .wl-pa-all-no {
     padding: 0px;
 }
@@ -311,53 +317,56 @@
     padding-right: @wl-base-xl;
 }
 
-// FLUID BOXES
-[class*="wl-box"] {
+// TEXT ALIGNMENTS
+// --------------------------------------------------
+.wl-ta-center {
+    text-align: center;
+}
+.wl-ta-left {
+    text-align: left;
+}
+.wl-ta-right {
+    text-align: right;
+}
+.wl-ta-justify {
+    text-align: justify;
+}
+
+// TEXT TRANSFORMS
+// --------------------------------------------------
+.wl-tt-uppercase {
+    text-transform: uppercase;
+}
+.wl-tt-lowercase {
+    text-transform: lowercase;
+}
+.wl-tt-capitalize {
+    text-transform: capitalize;
+}
+
+// VISIBILITY
+// --------------------------------------------------
+.wl-vs-visible {
+    visibility: visible;
+}
+.wl-vs-hidden {
+    visibility: hidden;
+}
+
+////////////////////////////////////////////////////////////////////////////////
+// Other useful helpers
+
+// FULLWIDTH
+// --------------------------------------------------
+.wl-fullwidth {
+    width: 100%;
+}
+
+// CENTERDIV
+// --------------------------------------------------
+.wl-centerdiv {
+    float: none;
     display: inline-block;
-    overflow: hidden;
-}
-.wl-box-75 {
-    width: 75%;
-}
-.wl-box-60 {
-    width: 60%;
-}
-.wl-box-50 {
-    width: 50%;
-}
-.wl-box-40 {
-    width: 40%;
-}
-.wl-box-33 {
-    width: 33.33%;
-}
-.wl-box-25 {
-    width: 25%;
-}
-.wl-box-20 {
-    width: 20%;
-}
-.wl-box-16 {
-    width: 16.66%;
-}
-.wl-box-15 {
-    width: 15%;
-}
-.wl-box-14 {
-    width: 14.285%;
-}
-.wl-box-12 {
-    width: 12.5%;
-}
-.wl-box-11 {
-    width: 11.11%;
-}
-.wl-box-10 {
-    width: 10%;
-}
-.wl-box-8 {
-    width: 8.333%;
-}
-.wl-box-5 {
-    width: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
