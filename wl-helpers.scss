@@ -4,7 +4,7 @@ Author: Aritz Olabarrieta
 Version: 1.1
 Last Update: 06-10-2015
 
-A tiny LESS file with commonly used CSS instructions, which will
+A tiny SCSS file with commonly used CSS instructions, which will
 help you building the layout and structure of any project. It works
 great in combination with Bootstrap.
 
@@ -16,8 +16,8 @@ NOTES and USE GUIDE
 
 - All WL classes are prefixed with "wl-".
 - There are 5 different sizes, which can be configured individually using
-"@wl-base-" variables: xs, sm, md, lg and xl, or by default, setting a
-base gutter with "@wl-base-gutter" variable, which automatically gets sized
+"$wl-base-" variables: xs, sm, md, lg and xl, or by default, setting a
+base gutter with "$wl-base-gutter" variable, which automatically gets sized
 proportionally.
 
 {SIZES} = xs, sm, md, lg, xl
@@ -43,14 +43,14 @@ FULLWIDTH:           wl-fullwidth
 // VARIABLES
 
 // Base Gutter
-@wl-base-gutter: 10px;
+$wl-base-gutter: 10px;
 
 // Base Sizes: xs,sm,md,lg,xl
-@wl-base-xs: @wl-base-gutter/3;
-@wl-base-sm: @wl-base-gutter/2;
-@wl-base-md: @wl-base-gutter;
-@wl-base-lg: @wl-base-gutter*2;
-@wl-base-xl: @wl-base-gutter*3;
+$wl-base-xs: $wl-base-gutter/3;
+$wl-base-sm: $wl-base-gutter/2;
+$wl-base-md: $wl-base-gutter;
+$wl-base-lg: $wl-base-gutter*2;
+$wl-base-xl: $wl-base-gutter*3;
 
 // --------------------------------------------------
 
@@ -62,19 +62,19 @@ FULLWIDTH:           wl-fullwidth
     height: 0px;
 }
 .wl-cfix-xs {
-    margin: @wl-base-xs 0px;
+    margin: $wl-base-xs 0px;
 }
 .wl-cfix-sm {
-    margin: @wl-base-sm 0px;
+    margin: $wl-base-sm 0px;
 }
 .wl-cfix-md {
-    margin: @wl-base-md 0px;
+    margin: $wl-base-md 0px;
 }
 .wl-cfix-lg {
-    margin: @wl-base-lg 0px;
+    margin: $wl-base-lg 0px;
 }
 .wl-cfix-xl {
-    margin: @wl-base-xl 0px;
+    margin: $wl-base-xl 0px;
 }
 
 // DISPLAY
@@ -129,95 +129,95 @@ FULLWIDTH:           wl-fullwidth
     margin: 0px;
 }
 .wl-ma-all-xs {
-    margin: @wl-base-xs;
+    margin: $wl-base-xs;
 }
 .wl-ma-all-sm {
-    margin: @wl-base-sm;
+    margin: $wl-base-sm;
 }
 .wl-ma-all-md {
-    margin: @wl-base-md;
+    margin: $wl-base-md;
 }
 .wl-ma-all-lg {
-    margin: @wl-base-lg;
+    margin: $wl-base-lg;
 }
 .wl-ma-all-xl {
-    margin: @wl-base-xl;
+    margin: $wl-base-xl;
 }
 
 .wl-ma-top-no {
     margin-top: 0px;
 }
 .wl-ma-top-xs {
-    margin-top: @wl-base-xs;
+    margin-top: $wl-base-xs;
 }
 .wl-ma-top-sm {
-    margin-top: @wl-base-sm;
+    margin-top: $wl-base-sm;
 }
 .wl-ma-top-md {
-    margin-top: @wl-base-md;
+    margin-top: $wl-base-md;
 }
 .wl-ma-top-lg {
-    margin-top: @wl-base-lg;
+    margin-top: $wl-base-lg;
 }
 .wl-ma-top-xl {
-    margin-top: @wl-base-xl;
+    margin-top: $wl-base-xl;
 }
 
 .wl-ma-bottom-no {
     margin-bottom: 0px;
 }
 .wl-ma-bottom-xs {
-    margin-bottom: @wl-base-xs;
+    margin-bottom: $wl-base-xs;
 }
 .wl-ma-bottom-sm {
-    margin-bottom: @wl-base-sm;
+    margin-bottom: $wl-base-sm;
 }
 .wl-ma-bottom-md {
-    margin-bottom: @wl-base-md;
+    margin-bottom: $wl-base-md;
 }
 .wl-ma-bottom-lg {
-    margin-bottom: @wl-base-lg;
+    margin-bottom: $wl-base-lg;
 }
 .wl-ma-bottom-xl {
-    margin-bottom: @wl-base-xl;
+    margin-bottom: $wl-base-xl;
 }
 
 .wl-ma-left-no {
     margin-left: 0px;
 }
 .wl-ma-left-xs {
-    margin-left: @wl-base-xs;
+    margin-left: $wl-base-xs;
 }
 .wl-ma-left-sm {
-    margin-left: @wl-base-sm;
+    margin-left: $wl-base-sm;
 }
 .wl-ma-left-md {
-    margin-left: @wl-base-md;
+    margin-left: $wl-base-md;
 }
 .wl-ma-left-lg {
-    margin-left: @wl-base-lg;
+    margin-left: $wl-base-lg;
 }
 .wl-ma-left-xl {
-    margin-left: @wl-base-xl;
+    margin-left: $wl-base-xl;
 }
 
 .wl-ma-right-no {
     margin-right: 0px;
 }
 .wl-ma-right-xs {
-    margin-right: @wl-base-xs;
+    margin-right: $wl-base-xs;
 }
 .wl-ma-right-sm {
-    margin-right: @wl-base-sm;
+    margin-right: $wl-base-sm;
 }
 .wl-ma-right-md {
-    margin-right: @wl-base-md;
+    margin-right: $wl-base-md;
 }
 .wl-ma-right-lg {
-    margin-right: @wl-base-lg;
+    margin-right: $wl-base-lg;
 }
 .wl-ma-right-xl {
-    margin-right: @wl-base-xl;
+    margin-right: $wl-base-xl;
 }
 
 // PADDINGS
@@ -226,95 +226,95 @@ FULLWIDTH:           wl-fullwidth
     padding: 0px;
 }
 .wl-pa-all-xs {
-    padding: @wl-base-xs;
+    padding: $wl-base-xs;
 }
 .wl-pa-all-sm {
-    padding: @wl-base-sm;
+    padding: $wl-base-sm;
 }
 .wl-pa-all-md {
-    padding: @wl-base-md;
+    padding: $wl-base-md;
 }
 .wl-pa-all-lg {
-    padding: @wl-base-lg;
+    padding: $wl-base-lg;
 }
 .wl-pa-all-xl {
-    padding: @wl-base-xl;
+    padding: $wl-base-xl;
 }
 
 .wl-pa-top-no {
     padding-top: 0px;
 }
 .wl-pa-top-xs {
-    padding-top: @wl-base-xs;
+    padding-top: $wl-base-xs;
 }
 .wl-pa-top-sm {
-    padding-top: @wl-base-sm;
+    padding-top: $wl-base-sm;
 }
 .wl-pa-top-md {
-    padding-top: @wl-base-md;
+    padding-top: $wl-base-md;
 }
 .wl-pa-top-lg {
-    padding-top: @wl-base-lg;
+    padding-top: $wl-base-lg;
 }
 .wl-pa-top-xl {
-    padding-top: @wl-base-xl;
+    padding-top: $wl-base-xl;
 }
 
 .wl-pa-bottom-no {
     padding-bottom: 0px;
 }
 .wl-pa-bottom-xs {
-    padding-bottom: @wl-base-xs;
+    padding-bottom: $wl-base-xs;
 }
 .wl-pa-bottom-sm {
-    padding-bottom: @wl-base-sm;
+    padding-bottom: $wl-base-sm;
 }
 .wl-pa-bottom-md {
-    padding-bottom: @wl-base-md;
+    padding-bottom: $wl-base-md;
 }
 .wl-pa-bottom-lg {
-    padding-bottom: @wl-base-lg;
+    padding-bottom: $wl-base-lg;
 }
 .wl-pa-bottom-xl {
-    padding-bottom: @wl-base-xl;
+    padding-bottom: $wl-base-xl;
 }
 
 .wl-pa-left-no {
     padding-left: 0px;
 }
 .wl-pa-left-xs {
-    padding-left: @wl-base-xs;
+    padding-left: $wl-base-xs;
 }
 .wl-pa-left-sm {
-    padding-left: @wl-base-sm;
+    padding-left: $wl-base-sm;
 }
 .wl-pa-left-md {
-    padding-left: @wl-base-md;
+    padding-left: $wl-base-md;
 }
 .wl-pa-left-lg {
-    padding-left: @wl-base-lg;
+    padding-left: $wl-base-lg;
 }
 .wl-pa-left-xl {
-    padding-left: @wl-base-xl;
+    padding-left: $wl-base-xl;
 }
 
 .wl-pa-right-no {
     padding-right: 0px;
 }
 .wl-pa-right-xs {
-    padding-right: @wl-base-xs;
+    padding-right: $wl-base-xs;
 }
 .wl-pa-right-sm {
-    padding-right: @wl-base-sm;
+    padding-right: $wl-base-sm;
 }
 .wl-pa-right-md {
-    padding-right: @wl-base-md;
+    padding-right: $wl-base-md;
 }
 .wl-pa-right-lg {
-    padding-right: @wl-base-lg;
+    padding-right: $wl-base-lg;
 }
 .wl-pa-right-xl {
-    padding-right: @wl-base-xl;
+    padding-right: $wl-base-xl;
 }
 
 // TEXT ALIGNMENTS
@@ -359,8 +359,8 @@ FULLWIDTH:           wl-fullwidth
 // CENTERDIV
 // --------------------------------------------------
 .wl-centerdiv {
-    display: inline-block;
     float: none;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
 }
@@ -368,6 +368,5 @@ FULLWIDTH:           wl-fullwidth
 // FULLWIDTH
 // --------------------------------------------------
 .wl-fullwidth {
-    max-width: 100%;
     width: 100%;
 }

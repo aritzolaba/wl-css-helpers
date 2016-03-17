@@ -44,3 +44,6 @@ CHANGELOG
 - Created some new utility classes: text transforms, centerdiv, text alignments
 - Removed fluid boxes for the moment, this is not a grid framework, just utilities
 - Updated readme.md file
+
+17-03-2016
+- Released SCSS version
